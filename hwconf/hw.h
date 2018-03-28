@@ -1,5 +1,5 @@
 /*
-	Copyright 2012-2014 Benjamin Vedder	benjamin@vedder.se
+	Copyright 2012-2017 Benjamin Vedder	benjamin@vedder.se
 
 	This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,10 +40,22 @@
 #include "hw_49.h"
 #elif defined HW_VERSION_410
 #include "hw_410.h"
+#elif defined HW_VERSION_60
+#include "hw_60.h"
 #elif defined HW_VERSION_R2
 #include "hw_r2.h"
 #elif defined HW_VERSION_VICTOR_R1A
 #include "hw_victor_r1a.h"
+#elif defined HW_VERSION_DAS_RS
+#include "hw_das_rs.h"
+#elif defined HW_VERSION_PALTA
+#include "hw_palta.h"
+#elif defined HW_VERSION_RH
+#include "hw_rh.h"
+#elif defined HW_VERSION_TP
+#include "hw_tp.h"
+#elif defined HW_VERSION_75_300
+#include "hw_75_300.h"
 #else
 #error "No hardware version defined"
 #endif
@@ -51,7 +63,6 @@
 // Functions
 void hw_init_gpio(void);
 void hw_setup_adc_channels(void);
-void hw_setup_servo_outputs(void);
 void hw_start_i2c(void);
 void hw_stop_i2c(void);
 void hw_try_restore_i2c(void);
